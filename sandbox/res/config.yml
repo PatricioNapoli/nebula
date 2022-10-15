@@ -1,0 +1,6 @@
+windowWidth: 1440
+windowHeight: 980
+multisample: yes
+borderless: no
+graphics_api: opengl
+vsync: no

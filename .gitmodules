@@ -1,0 +1,30 @@
+[submodule "engine/vendor/fmt/lib"]
+	path = engine/vendor/fmt/lib
+	url = https://github.com/fmtlib/fmt
+[submodule "engine/vendor/glfw/lib"]
+	path = engine/vendor/glfw/lib
+	url = https://github.com/glfw/glfw
+[submodule "engine/vendor/assimp/lib"]
+	path = engine/vendor/assimp/lib
+	url = https://github.com/assimp/assimp
+[submodule "engine/vendor/glm/lib"]
+	path = engine/vendor/glm/lib
+	url = https://github.com/g-truc/glm
+[submodule "engine/vendor/pcg-cpp/lib"]
+	path = engine/vendor/pcg-cpp/lib
+	url = https://github.com/imneme/pcg-cpp
+[submodule "engine/vendor/sparse-map/lib"]
+	path = engine/vendor/sparse-map/lib
+	url = https://github.com/Tessil/sparse-map
+[submodule "engine/vendor/spdlog/lib"]
+	path = engine/vendor/spdlog/lib
+	url = https://github.com/gabime/spdlog
+[submodule "engine/vendor/unordered-dense/lib"]
+	path = engine/vendor/unordered-dense/lib
+	url = https://github.com/martinus/unordered_dense
+[submodule "engine/vendor/xxhash/lib"]
+	path = engine/vendor/xxhash/lib
+	url = https://github.com/Cyan4973/xxHash
+[submodule "engine/vendor/yaml-cpp/lib"]
+	path = engine/vendor/yaml-cpp/lib
+	url = https://github.com/jbeder/yaml-cpp
