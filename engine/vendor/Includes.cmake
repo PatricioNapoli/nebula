@@ -1,0 +1,8 @@
+macro(INCLUDE_VENDOR dir)
+    file(GLOB children ${dir}/*)
+    foreach(child ${children})
+        if(IS_DIRECTORY ${child})
+            include_directories(${child}/library/include)
+        endif()
+    endforeach()
+endmacro()
