@@ -7,7 +7,6 @@
 #include <iomanip>
 
 #include "engine_debug.h"
-#include "engine_platforms.h"
 
 #ifdef NEBULA_PROFILING
 #define NEB_TOKENPASTE(x, y) x ## y

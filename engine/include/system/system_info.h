@@ -1,14 +1,13 @@
 #pragma once
 
 #include <GL/glew.h>
-#include "memory/containers.h"
 #include <cstring>
 #include <fstream>
 #include <sstream>
 
+#include "memory/containers.h"
 #include "injector/injectable.h"
 #include "logging/logger.h"
-#include "engine_platforms.h"
 
 namespace nebula {
     class SystemInfo : public Injectable {
