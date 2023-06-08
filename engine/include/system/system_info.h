@@ -6,6 +6,7 @@
 #include <sstream>
 
 #include "memory/containers.h"
+#include "engine_platforms.h"
 #include "injector/injectable.h"
 #include "logging/logger.h"
 

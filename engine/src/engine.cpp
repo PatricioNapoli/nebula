@@ -13,6 +13,7 @@
 #include "profiling/profiler.h"
 #include "scene/entity.h"
 #include "concurrency/scheduler.h"
+#include "monad/result.h"
 
 namespace nebula {
     Engine::Engine(Config cfg) : _cfg(std::move(cfg)) {
@@ -30,7 +31,7 @@ namespace nebula {
         delete _threadPool;
         _logger->info("Destroyed thread pool.");
 
-        if (Profiler::get()->isEnabled()) {
+        if (Profiler::isEnabled()) {
             _logger->info("Saving profiling results..");
 
             auto r = Profiler::get()->jsonResults();
@@ -41,6 +42,13 @@ namespace nebula {
         delete _injector;
     }
 
+    struct ResTest {
+        int a = 0;
+
+        ResTest() = default;
+        explicit ResTest(int a) : a(a) {}
+    };
+    
     void Engine::init() {
         NEBULA_PROFILE;
 

@@ -45,7 +45,7 @@ namespace nebula {
     void OpenGL::init() {
         if (auto err = glewInit(); err != GLEW_OK) {
             _logger->critical("GL Error: {}", glewGetErrorString(err));
-            throw EngineException("Failed to initialize openGl.", __FILE__, EngineException::Fatal);
+            throw EngineException("Failed to initialize openGL.", __FILE__, EngineException::Fatal);
         }
 
         if (!glewIsSupported("GL_VERSION_4_1")) {

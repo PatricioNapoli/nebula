@@ -9,7 +9,7 @@ endif (NEBULA_ASAN)
 set(CMAKE_CXX_STANDARD 17)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    set(CMAKE_CXX_FLAGS "${ASAN_FLAGS} -fvisibility=hidden -Wall -Wno-unused-variable -Wno-unused-parameter -Wno-return-std-move -Wno-format-security -Wno-unknown-pragmas")
+    set(CMAKE_CXX_FLAGS "${ASAN_FLAGS} -fvisibility=hidden -Wall -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-parameter -Wno-return-std-move -Wno-format-security -Wno-unknown-pragmas")
     set(CMAKE_CXX_FLAGS_DEBUG "-g")
     set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")

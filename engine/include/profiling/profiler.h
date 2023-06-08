@@ -33,7 +33,7 @@ namespace nebula {
             _results.push(std::forward<ProfilingResult>(r));
         }
 
-        bool isEnabled() {
+        static bool constexpr isEnabled() {
 #ifdef NEBULA_PROFILING
             return true;
 #else
@@ -46,7 +46,7 @@ namespace nebula {
 
             json << "{";
 
-            json << "\"traceEvents\":[";
+            json << R"("traceEvents\":[)";
 
             int i = 0;
             while (!_results.empty()) {
@@ -58,18 +58,18 @@ namespace nebula {
                     json << ",{";
                 else
                     json << "{";
-                json << "\"cat\":\"function\",";
-                json << "\"dur\":" << (r.micros) << ',';
+                json << R"("cat":"function",)";
+                json << R"("dur":)" << (r.micros) << ',';
 
                 if (!r.data.empty())
-                    json << "\"name\":\"" << r.name << " " << r.data << "\",";
+                    json << R"("name":")" << r.name << " " << r.data << "\",";
                 else
-                    json << "\"name\":\"" << r.name << "\",";
+                    json << R"("name":")" << r.name << "\",";
 
-                json << "\"ph\":\"X\",";
-                json << "\"pid\":0,";
-                json << "\"tid\":\"" << r.thread << "\",";
-                json << "\"ts\":" << r.start;
+                json << R"("ph":"X",)";
+                json << R"("pid":0,)";
+                json << R"("tid":")" << r.thread << R"(",)";
+                json << R"("ts":)" << r.start;
                 json << "}";
 
                 i++;

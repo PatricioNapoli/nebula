@@ -23,14 +23,14 @@ namespace nebula {
                     string s(fileSize, ' ');
                     in.read(&s[0], s.size());
                     in.close();
-                    return File(filepath, s);
+                    return {filepath, s};
                 }
                 case File::Vector:
                 {
                     vector<uint8_t> vec(fileSize);
                     in.read(reinterpret_cast<char*>(&vec.front()), vec.size());
                     in.close();
-                    return File(filepath, vec);
+                    return {filepath, vec};
                 }
             }
         }

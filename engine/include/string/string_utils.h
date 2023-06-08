@@ -11,7 +11,7 @@ namespace nebula::string_utils {
         auto out = fmt::memory_buffer();
         fmt::format_to(std::back_inserter(out), format, args...);
         out.push_back('\0');
-        return string(out.data());
+        return {out.data()};
     }
 
     string remove(const string& str, char character);

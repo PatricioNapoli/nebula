@@ -13,6 +13,6 @@ namespace nebula::engine {
 
         Scene* scene{nullptr};
 
-        SceneChangedMsg(Scene* scene) : scene(scene) {}
+        explicit SceneChangedMsg(Scene* scene) : scene(scene) {}
     };
 }
